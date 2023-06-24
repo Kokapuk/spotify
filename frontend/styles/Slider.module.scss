@@ -1,0 +1,48 @@
+@import './vars.scss';
+
+.slider {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  appearance: none;
+  height: 4px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.25);
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &::-webkit-slider-thumb {
+    opacity: 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: var(--percentage);
+    background-color: white;
+    border-radius: 4px;
+  }
+
+  &:hover::before {
+    background-color: $primary;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: var(--percentage);
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    background-color: white;
+    scale: 0;
+  }
+
+  &:hover::after {
+    scale: 3;
+  }
+}

@@ -1,0 +1,50 @@
+@import '../styles/vars.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  width: 35%;
+}
+
+.group {
+  padding: 20px;
+}
+
+.link-list {
+  list-style: none;
+}
+
+.link {
+  color: white;
+  opacity: 0.65;
+  transition: $transition;
+
+  &:hover,
+  &__active {
+    opacity: 1;
+    text-decoration: none;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+.library {
+  height: 100%;
+
+  &__header {
+    opacity: 0.65;
+    margin-bottom: 15px;
+  }
+
+  &__sign-up-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

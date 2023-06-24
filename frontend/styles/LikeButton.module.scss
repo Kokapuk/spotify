@@ -1,0 +1,26 @@
+@import './vars.scss';
+
+.like-button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+  transition: $transition;
+
+  &:hover {
+    color: white;
+  }
+
+  &:active {
+    scale: 0.9;
+  }
+
+  &__icon {
+    height: 17px;
+    width: 17px;
+  }
+
+  &__liked {
+    color: $primary;
+  }
+}

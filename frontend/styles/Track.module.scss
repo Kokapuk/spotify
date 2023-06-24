@@ -1,0 +1,81 @@
+@import './vars.scss';
+
+.container {
+  display: flex;
+  gap: 15px;
+  height: 60px;
+  padding: 5px;
+  border-radius: $border-radius-small;
+  transition: $transition;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.play-button {
+  height: 100%;
+  aspect-ratio: 1/1;
+  background-color: transparent;
+  border: 0;
+  border-radius: $border-radius-small;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+
+  &__icon {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    opacity: 0;
+    transition: $transition;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .container:hover &__icon {
+    padding: 10px;
+    opacity: 1;
+  }
+
+  &:active &__icon {
+    padding: 15px;
+    opacity: 1;
+  }
+
+  &__cover {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+
+  &__track-name {
+    &__now-playing {
+      color: $primary;
+    }
+
+    font-size: 18px;
+  }
+
+  &__author {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.like-button {
+  margin-left: auto;
+  margin-right: 15px;
+  opacity: 0;
+
+  .container:hover &,
+  &__liked {
+    opacity: 1;
+  }
+}

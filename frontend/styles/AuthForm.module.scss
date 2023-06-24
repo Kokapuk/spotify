@@ -1,0 +1,39 @@
+@import './vars.scss';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input {
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 50px;
+  outline: 1px solid rgba(255, 255, 255, 0.35);
+  border: 0;
+
+  &:hover {
+    outline-color: white;
+  }
+
+  &:focus {
+    outline-width: 2px;
+    outline-color: white;
+  }
+}
+
+.error-message {
+  color: $danger;
+}
+
+.button {
+  padding: 10px 15px;
+
+  &__high-contrast {
+    background-color: $primary;
+  }
+}
